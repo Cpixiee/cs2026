@@ -26,7 +26,7 @@ services:
     container_name: cs2026_backend
     restart: always
     environment:
-      PORT: "8080"
+      PORT: "9004"
       DB_HOST: "postgres"
       DB_PORT: "5432"
       DB_USER: "postgres"

@@ -22,7 +22,7 @@ export default function PreRegisterForm() {
 
     try {
       // Send request to Go Backend endpoint (with fallback)
-      const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
+      const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:9004";
       const res = await fetch(`${backendUrl}/api/v1/subscribe`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
