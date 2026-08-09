@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Rubik:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import "tailwindcss";
+
+:root {
+  --surface-bg: #FBF9F0;
+  --surface-white: #FFFFFF;
+  --text-dark: #1C1C17;
+  --primary-blue: #1800AC;
+  --primary-indigo: #1B12D6;
+  --y2k-pink: #FF66C4;
+  --y2k-pink-light: #FFADE2;
+  --y2k-green: #B5F43C;
+  --y2k-yellow: #EFE83C;
+  --y2k-cyan: #29D3E8;
+  --y2k-purple: #9D4EDD;
+}
+
+body {
+  background-color: var(--surface-bg);
+  color: var(--text-dark);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Typography Utilities */
+.font-bebas {
+  font-family: 'Bebas Neue', cursive, sans-serif;
+}
+
+.font-rubik {
+  font-family: 'Rubik', sans-serif;
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Y2K Neo-Brutalist Hard Shadows */
+.shadow-brutal-sm {
+  box-shadow: 3px 3px 0px #1C1C17;
+}
+
+.shadow-brutal {
+  box-shadow: 4px 4px 0px #1C1C17;
+}
+
+.shadow-brutal-lg {
+  box-shadow: 6px 6px 0px #1C1C17;
+}
+
+.shadow-brutal-xl {
+  box-shadow: 8px 8px 0px #1C1C17;
+}
+
+.shadow-brutal-white {
+  box-shadow: 4px 4px 0px #FFFFFF;
+}
+
+/* Sticker & Extruded Text Effect */
+.sticker-text {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+  text-shadow: 
+    4px 4px 0px #1C1C17,
+    -2px -2px 0px #1C1C17,
+    2px -2px 0px #1C1C17,
+    -2px 2px 0px #1C1C17,
+    2px 2px 0px #1C1C17;
+}
+
+.sticker-text-white {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+  color: white;
+  text-shadow: 
+    5px 5px 0px #1C1C17,
+    -3px -3px 0px #1C1C17,
+    3px -3px 0px #1C1C17,
+    -3px 3px 0px #1C1C17,
+    3px 3px 0px #1C1C17;
+}
+
+.icon-stroke {
+  font-variation-settings: 'FILL' 1;
+  -webkit-text-stroke: 3px #1C1C17;
+  filter: drop-shadow(4px 4px 0px #1C1C17);
+}
+
+.icon-stroke-lg {
+  font-variation-settings: 'FILL' 1;
+  -webkit-text-stroke: 4px #1C1C17;
+  filter: drop-shadow(6px 6px 0px #1C1C17);
+}
+
+/* Background Patterns */
+.bg-dots {
+  background-image: radial-gradient(#1C1C17 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.bg-dots-light {
+  background-image: radial-gradient(rgba(28, 28, 23, 0.15) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+.bg-grid {
+  background-image: 
+    linear-gradient(to right, rgba(28, 28, 23, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(28, 28, 23, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Continuous Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 15s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Floating Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(-15deg); }
+  50% { transform: translateY(-12px) rotate(-11deg); }
+}
+
+@keyframes floatFast {
+  0%, 100% { transform: translateY(0px) rotate(20deg); }
+  50% { transform: translateY(-8px) rotate(24deg); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: floatFast 3s ease-in-out infinite;
+}
+
+/* Material Icons styling */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
