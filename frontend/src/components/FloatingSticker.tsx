@@ -47,7 +47,7 @@ export default function FloatingSticker({
       }}
       whileHover={{ scale: 1.2, rotate: rotation + 15 }}
       whileTap={{ scale: 0.9 }}
-      className="cursor-pointer select-none hidden sm:block"
+      className="cursor-pointer select-none block"
     >
       <span
         className="material-symbols-outlined transition-transform filter drop-shadow-[5px_5px_0px_#1C1C17]"
