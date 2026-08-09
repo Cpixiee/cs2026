@@ -9,8 +9,7 @@ out/
 frontend/out/
 
 # Go compiled binaries
-server
-backend/server
+/backend/server
 *.exe
 *.exe~
 *.dll
